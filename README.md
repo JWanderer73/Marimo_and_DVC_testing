@@ -28,7 +28,9 @@ row order, and the number of rows are preserved.
 
 All stages run Python through `uv run`; no environment activation is needed.
 
-The raw CSV is tracked with DVC; the original root-level `events.csv` is
+The raw CSV at `data/raw/events.csv` is tracked directly in Git so a fresh
+checkout can run the pipeline without downloading input data. Generated
+outputs are tracked with DVC. The original root-level `events.csv` is
 preserved. No remote storage is configured yet.
 
 Open the Marimo report after running the pipeline:
